@@ -1,0 +1,21 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: juice_test_spec
+  pool: 5
+  username: ice 
+  password: "ice123"
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: juice_test
+  pool: 5
+  username: ice 
+  password: "ice123"
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: juice_test
+  pool: 5
