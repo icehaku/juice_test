@@ -6,4 +6,5 @@ ratings:
   - app/**
   - lib/**
 exclude_paths:
-- "app/assets/javascripts/"
+- 'app/assets/javascripts/''
+ -'config/'
