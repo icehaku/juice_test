@@ -9,7 +9,7 @@ class DashboardController < ApplicationController
 
 
   def clear_search_analytics
-    Search.all.destroy_all
+    Search.destroy_all
 
     redirect_to :back
   end
