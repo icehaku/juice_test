@@ -1,3 +1,117 @@
-// Place all the styles related to the search controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.search_box_analytics_list {
+  color: #a9896d;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.search-page-head-title {
+  color: #faf1e0;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+.search_box {
+  background-color: #fff;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.search_box_analytics {
+  background-color: #fff;
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.search_box_head {
+  color: #f9f6e5;
+  width: 600px;
+  height: 70px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1px;
+  padding-top: 10px;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.head-color {
+  background-color: #f7941e;
+}
+
+.head-color-analytics {
+  background-color: #f4442e;
+}
+
+.search_box_content {
+  padding-left: 25px;
+  padding-top: 50px;
+}
+
+.search_box_content_analytics {
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.search_box_content_label {
+  display: block;
+  color: #d5bba4;
+  font-family: 'Lato', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.search_box_content_input {
+  border: none;
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: 530px;
+  color: #b09a86;
+  font-weight: 300;
+  font-size: 2.2em;
+}
+
+.search_box_content_friendly_message {
+  font-weight: 300;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #ccb096;
+  line-height: 1.75;
+  font-size: 1.2em;
+}
+
+.button {
+  padding: 10px;
+  width: 550px;
+  height: 60px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  &:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.get_help {
+  background: #a9896d;
+}
+
+.dashboard {
+  background: #f4442e;
+}
+
+.home {
+  background: #f7941e;
+}
+
+.clear {
+  background: #a31621;
+}

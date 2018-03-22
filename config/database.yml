@@ -3,7 +3,7 @@ test:
   encoding: unicode
   database: juice_test_spec
   pool: 5
-  username: ice 
+  username: ice
   password: "ice123"
 
 development:
@@ -11,7 +11,7 @@ development:
   encoding: unicode
   database: juice_test
   pool: 5
-  username: ice 
+  username: ice
   password: "ice123"
 
 production:

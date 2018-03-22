@@ -1,18 +1,42 @@
-<div style="color: white;">
-  <h3>Good Analytics</h3>
+<h1 align="center" class="search-page-head-title">Helpjuice Analytics</h1>
 
-  <% @good_analytics.each do |search| %>
-    <%= "#{search[0]} (#{search[1]} searches)" %> <br>
-  <% end %>
-
-  <br>
-
-  <h3>Bad Analytics</h3>
-
-  <% @bad_analytics.each do |search| %>
-    <%= "#{search[0]} (#{search[1]} searches)" %> <br>
-  <% end %>
-
+<div class="search_box_head head-color-analytics" align="center">
+  <div>
+    <h2>What people are looking for?</h2>
+  </div>
 </div>
 
-<%= button_to "Home", root_path, method: :get %>
+<div class="search_box_analytics">
+
+  <div class="search_box_content_analytics">
+
+    <div class="search_box_analytics_list">
+      <h3>Good Analytics</h3>
+      <ol>
+        <% @good_analytics.each do |search| %>
+          <li><%= "#{search[0]} (#{search[1]} searches)" %></li>
+        <% end %>
+      </ol>
+
+      <h3>Bad Analytics</h3>
+      <ol>
+        <% @bad_analytics.each do |search| %>
+          <li><%= "#{search[0]} (#{search[1]} searches)" %></li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div>
+      <p><%= button_to "Home", root_path, class: "home button", method: :get %></p>
+    </div>
+
+    <div>
+      <p>
+        <%= button_to "Clear Stats", clear_search_analytics_path, class: "clear button",
+          method: :get, data: { confirm: "Are you sure you want to reset stats?" } %>
+      </p>
+    </div>
+
+  </div>
+
+</div>

@@ -1,16 +1,31 @@
-<div align="center" style="color: white;">
-  <%= form_for(@search, url: search_submitted_path) do |f| %>
-    <div class="field">
-      <label>Ask for Help:</label>
-      <%= f.text_field :term %>
+<h1 align="center" class="search-page-head-title">Helpjuice</h1>
+
+<div class="search_box_head head-color" align="center">
+  <div>
+    <h2>Let's find what you need!</h2>
+  </div>
+</div>
+
+<div class="search_box">
+  <div class="search_box_content">
+    <%= form_for(@search, url: search_submitted_path) do |f| %>
+      <label class="search_box_content_label">Ask for Help</label> <br>
+      <%= f.text_field :term, class: "search_box_content_input" %> <br>
+      <span class="search_box_content_friendly_message">
+        If we don't find it today, for sure we gonna find soon!
+      </span> <br>
+
+      <div>
+        <p><%= f.submit "Get Help!", class: "get_help button" %></p>
+      </div>
+    <% end %>
+
+    <div>
+      <p>
+        <%= button_to "Dashboard", search_dashbord_analytics_path,
+          class: "dashboard button", method: :get %>
+      </p>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Get Help!" %>
-    </div>
-  <% end %>
-
-  <%= button_to "Dashboard", search_dashbord_analytics_path, method: :get  %>
-  <%= button_to "Clear Stats", clear_search_analytics_path, method: :get,
-    data: { confirm: "Are you sure you want to reset stats?" }  %>
+  </div>
 </div>

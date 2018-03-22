@@ -29,11 +29,5 @@ group :development do
 end
 
 group :test do
-  #gem 'vcr', '~> 0.0.0'
-  #gem 'webmock', '~> 0.0.0'
-  #gem 'capybara', '~> 0.0.0'
-  #gem 'shoulda-matchers', '~> 0.0.0'
   gem 'rails-controller-testing', '~> 1.0.2'
-  gem 'simplecov', '~> 0.13.0', require: false
-  gem 'codeclimate-test-reporter', '~> 1.0.8', require: false
 end
