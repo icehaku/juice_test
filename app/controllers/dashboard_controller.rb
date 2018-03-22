@@ -5,7 +5,6 @@ class DashboardController < ApplicationController
       submitted: true).group(:term).order('count_term desc').count(:term)
     @bad_analytics = Search.where(
       submitted: false).group(:term).order('count_term desc').count(:term)
-    #raise Search.where.inspect
   end
 
 
