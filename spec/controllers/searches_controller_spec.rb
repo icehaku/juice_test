@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe SearchesController do
-
   describe "#home" do
     include_context :gon
 
@@ -45,6 +44,7 @@ RSpec.describe SearchesController do
     end
   end
 
+
   describe "#save_incomplete_searches" do
     let(:sample_search) { build(:search, :submitted) }
 
@@ -62,4 +62,5 @@ RSpec.describe SearchesController do
       expect(result.submitted).to eq false
     end
   end
+
 end
