@@ -1,8 +1,8 @@
-<h1 align="center" class="search-page-head-title">Helpjuice Analytics</h1>
+<h1 align="center" class="search-page-head-title"><%= t('analytical.page-title') %></h1>
 
 <div class="search_box_head head-color-analytics" align="center">
   <div>
-    <h2>What people are looking for?</h2>
+    <h2><%= t('analytical.list-box.head-title') %></h2>
   </div>
 </div>
 
@@ -11,29 +11,21 @@
   <div class="search_box_content_analytics">
 
     <div class="search_box_analytics_list">
-      <h3>Good Analytics</h3>
-      <ol>
-        <% @good_analytics.each do |search| %>
-          <li><%= "#{search[0]} (#{search[1]} searches)" %></li>
-        <% end %>
-      </ol>
+      <h3><%= t('analytical.list-box.good-list-title') %></h3>
+      <%= list_of_searches(@good_analytics) %>
 
-      <h3>Bad Analytics</h3>
-      <ol>
-        <% @bad_analytics.each do |search| %>
-          <li><%= "#{search[0]} (#{search[1]} searches)" %></li>
-        <% end %>
-      </ol>
+      <h3><%= t('analytical.list-box.bad-list-title') %></h3>
+      <%= list_of_searches(@bad_analytics) %>
     </div>
 
     <div>
-      <p><%= button_to "Home", root_path, class: "home button", method: :get %></p>
+      <p><%= button_to t('analytical.list-box.home-button'), root_path, class: "home button", method: :get %></p>
     </div>
 
     <div>
       <p>
-        <%= button_to "Clear Stats", clear_search_analytics_path, class: "clear button",
-          method: :get, data: { confirm: "Are you sure you want to reset stats?" } %>
+        <%= button_to t('analytical.list-box.clear-button'), clear_search_analytics_path, class: "clear button",
+          method: :get, data: { confirm: t('analytical.list-box.clear-button-confirmation') } %>
       </p>
     </div>
 

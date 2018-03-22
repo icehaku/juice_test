@@ -17,8 +17,8 @@ group :development, :test do
   gem 'byebug', '~> 10.0.0'
   gem 'pry-byebug', '~> 3.6.0'
   gem 'rspec-rails', '~> 3.7.2'
-  #gem 'factory_bot'
-  #gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do

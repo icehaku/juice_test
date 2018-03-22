@@ -1,28 +1,32 @@
-<h1 align="center" class="search-page-head-title">Helpjuice</h1>
+<h1 align="center" class="search-page-head-title"><%= t('home.page-title') %></h1>
 
 <div class="search_box_head head-color" align="center">
   <div>
-    <h2>Let's find what you need!</h2>
+    <h2><%= t('home.search-box.head-title') %></h2>
   </div>
 </div>
 
 <div class="search_box">
   <div class="search_box_content">
     <%= form_for(@search, url: search_submitted_path) do |f| %>
-      <label class="search_box_content_label">Ask for Help</label> <br>
+
+      <label class="search_box_content_label">
+        <%= t('home.search-box.input-label') %>
+      </label> <br>
       <%= f.text_field :term, class: "search_box_content_input" %> <br>
+
       <span class="search_box_content_friendly_message">
-        If we don't find it today, for sure we gonna find soon!
+        <%= t('home.search-box.friendly-message') %>
       </span> <br>
 
       <div>
-        <p><%= f.submit "Get Help!", class: "get_help button" %></p>
+        <p><%= f.submit t('home.search-box.submit-button'), class: "get_help button" %></p>
       </div>
     <% end %>
 
     <div>
       <p>
-        <%= button_to "Dashboard", search_dashbord_analytics_path,
+        <%= button_to t('home.search-box.dashboard-button'), search_dashbord_analytics_path,
           class: "dashboard button", method: :get %>
       </p>
     </div>

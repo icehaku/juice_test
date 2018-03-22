@@ -1,5 +1,4 @@
 class SearchesController < ApplicationController
-
   def home
     @search = Search.new
 
@@ -9,7 +8,7 @@ class SearchesController < ApplicationController
   #this could be a separated service/app so we could have space for horizontal scale.
   def save_incomplete_searches
     if params[:term].present?
-      search = Search.new(term: params[:term].downcase.strip)
+      search = Search.new(term: params[:term])
       search.save
 
       #this could be a separated service/app so we could have space for horizontal scale.
@@ -24,27 +23,11 @@ class SearchesController < ApplicationController
 
   def search_submitted
     if search_params[:term].present?
-      search = Search.new(term: search_params[:term].downcase.strip, submitted: true)
+      search = Search.new(term: search_params[:term], submitted: true)
       search.save
     end
 
-    redirect_to :back
-  end
-
-
-  #this could be a separated service/app so we could have space for horizontal scale.
-  def dashbord_analytics
-    @good_analytics = Search.where(
-      submitted: true).group(:term).order('count_term desc').count(:term)
-    @bad_analytics = Search.where(
-      submitted: false).group(:term).order('count_term desc').count(:term)
-  end
-
-
-  def clear_search_analytics
-    Search.all.destroy_all
-
-    redirect_to :back
+    redirect_to :root
   end
 
 
