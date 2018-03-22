@@ -9,7 +9,7 @@
 
 ## Description
 
-A small project for a RoR Dev Position;
+A project for a RoR Dev Position;
 
 ## Run the Project
 
@@ -17,6 +17,7 @@ A small project for a RoR Dev Position;
 git clone https://github.com/icehaku/juice_test.git
 bundle install
 rake db:migrate
+rake db:create RAILS_ENV=test #test suite
 rspec ./spec #test suite
 ```
 # Hosted Project on Heroku
