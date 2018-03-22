@@ -1,5 +1,7 @@
 # JuiceTest
 
+[![Build Status](https://travis-ci.org/icehaku/juice_test.svg?branch=master)](https://travis-ci.org/icehaku/juice_test)
+
 * Ruby version: 2.3.1p112
 * Rails version: 5.0.6
 
